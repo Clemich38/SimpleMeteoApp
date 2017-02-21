@@ -24,13 +24,15 @@ export class WeatherDisplayPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public weather: WeatherProvider)
   {
+    // Get the city name passed as a parameter
     this.currentCity = this.navParams.get('cityName');
-    console.log('cityName:');
-    console.log(this.currentCity);
+    
+    // Display current weather
     this.GetCurrentWeather(this.currentCity);
   }
 
-  private GetCurrentWeather(city: string) {
+  private GetCurrentWeather(city: string)
+  {
     // Get current weather
     this.currentCity = city;
     this.weather.getWeather('weather?q=', city).subscribe(
@@ -47,9 +49,4 @@ export class WeatherDisplayPage {
         this.currentDate = new Date(data.dt * 1000);
       });
   }
-
-  ionViewDidLoad() {
-    
-  }
-
 }

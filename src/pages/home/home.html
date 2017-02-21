@@ -7,11 +7,28 @@
 </ion-header>
 
 <ion-content padding>
+
+<!-- Look by city name form -->
 <div>
   <form (ngSubmit)="openWeatherPage()">
     <ion-item>
       <ion-label floating>City</ion-label>
       <ion-input type="text" [(ngModel)]="currentCity" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" text-lowercase text-capitalize>Get Current Weather</button>
+  </form>
+</div>
+  
+<!-- Look by Zip code form -->
+<div>
+  <form (ngSubmit)="cityLookup()">
+    <ion-item>
+      <ion-label floating>Zip code</ion-label>
+      <ion-input type="text" [(ngModel)]="cityInfo.zip" [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Country code</ion-label>
+      <ion-input type="text" [(ngModel)]="cityInfo.code" [ngModelOptions]="{standalone: true}" required></ion-input>
     </ion-item>
     <button ion-button type="submit" text-lowercase text-capitalize>Get Current Weather</button>
   </form>

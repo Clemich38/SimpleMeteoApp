@@ -11,6 +11,7 @@
     <h2 text-lowercase text-capitalize>Weather in {{currentCity}}</h2>
     <ion-grid>
 
+      <!-- Weather Icon & temperature -->
       <ion-row center>
         <ion-col width-50>
           <img src="http://openweathermap.org/img/w/{{currentWeatherIcon}}.png">
@@ -22,6 +23,7 @@
 
       <p>{{currentWeatherDescription}}</p>
 
+      <!-- Wind speed -->
       <ion-row center>
         <ion-col width-50>
           Wind:
@@ -31,6 +33,7 @@
         </ion-col>
       </ion-row>
 
+      <!-- Pressure -->
       <ion-row center>
         <ion-col width-50>
           Pressure:
@@ -40,6 +43,7 @@
         </ion-col>
       </ion-row>
 
+      <!-- Humidity -->
       <ion-row center>
         <ion-col width-50>
           Humidity:
