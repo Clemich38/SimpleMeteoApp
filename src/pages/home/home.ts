@@ -31,8 +31,6 @@ export class HomePage {
     this.weather.getWeather('weather?q=', this.cityInfo.zip + "," + this.cityInfo.code).subscribe(
       data => {
         this.currentCity = data.name;
-        console.log('Yo!');
-        console.log(this.currentCity);
         this.openWeatherPage();
         
       }).unsubscribe;
