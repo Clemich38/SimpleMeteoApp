@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
 import { WeatherProvider } from '../../providers/weather-provider';
 import { WeatherDisplayPage } from '../weather-display/weather-display';
